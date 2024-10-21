@@ -176,4 +176,69 @@
         let contact = document.getElementById("contact").value;
         let contactRegex = /^[0-9]{10}$/;
         if (!contactRegex.test(contact)) {
-            document.getElementById("contactError
+            document.getElementById("contactError").style.display = "block";
+            isValid = false;
+        } else {
+            document.getElementById("contactError").style.display = "none";
+        }
+
+        // Gender validation
+        let gender = document.getElementById("gender").value;
+        if (gender === "") {
+            document.getElementById("genderError").style.display = "block";
+            isValid = false;
+        } else {
+            document.getElementById("genderError").style.display = "none";
+        }
+
+        // State validation
+        let state = document.getElementById("state").value;
+        if (state === "") {
+            document.getElementById("stateError").style.display = "block";
+            isValid = false;
+        } else {
+            document.getElementById("stateError").style.display = "none";
+        }
+
+        // Address validation
+        let address = document.getElementById("address").value;
+        if (address === "") {
+            document.getElementById("addressError").style.display = "block";
+            isValid = false;
+        } else {
+            document.getElementById("addressError").style.display = "none";
+        }
+
+        // Username validation
+        let username = document.getElementById("username").value;
+        if (username === "") {
+            document.getElementById("usernameError").style.display = "block";
+            isValid = false;
+        } else {
+            document.getElementById("usernameError").style.display = "none";
+        }
+
+        // Password validation
+        let password = document.getElementById("password").value;
+        if (password.length < 6) {
+            document.getElementById("passwordError").style.display = "block";
+            isValid = false;
+        } else {
+            document.getElementById("passwordError").style.display = "none";
+        }
+
+        // Confirm password validation
+        let confirmPassword = document.getElementById("confirmPassword").value;
+        if (confirmPassword !== password) {
+            document.getElementById("confirmPasswordError").style.display = "block";
+            isValid = false;
+        } else {
+            document.getElementById("confirmPasswordError").style.display = "none";
+        }
+
+        return isValid;  // Return the form validity status
+    }
+</script>
+
+</body>
+</html>
